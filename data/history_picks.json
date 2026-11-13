@@ -8,7 +8,7 @@
     "fetchedAt": "2026-11-13T07:20:01.841Z",
     "excerpt": null,
     "proposed": "ng",
-    "verdict": null
+    "verdict": "ng"
   },
   {
     "name": "東京さくらトラム（都電荒川線）",
@@ -19,7 +19,7 @@
     "fetchedAt": "2026-11-13T07:20:02.232Z",
     "excerpt": "かつて東京都区部（東京23区）を中心に、ピーク時には40路線を展開していた都電路線の大半が廃止された後も、荒川線のみが残った。",
     "proposed": "ok",
-    "verdict": null
+    "verdict": "ok"
   },
   {
     "name": "大師前駅",
@@ -30,7 +30,7 @@
     "fetchedAt": "2026-11-13T07:20:02.653Z",
     "excerpt": null,
     "proposed": "ng",
-    "verdict": null
+    "verdict": "ng"
   },
   {
     "name": "入谷駅",
@@ -41,7 +41,7 @@
     "fetchedAt": "2026-11-13T07:20:03.048Z",
     "excerpt": null,
     "proposed": "ng",
-    "verdict": null
+    "verdict": "ng"
   },
   {
     "name": "不動前駅",
@@ -52,7 +52,7 @@
     "fetchedAt": "2026-11-13T07:20:03.451Z",
     "excerpt": null,
     "proposed": "ng",
-    "verdict": null
+    "verdict": "ng"
   },
   {
     "name": "青梅駅",
@@ -63,7 +63,7 @@
     "fetchedAt": "2026-11-13T07:20:03.841Z",
     "excerpt": null,
     "proposed": "ng",
-    "verdict": null
+    "verdict": "ng"
   },
   {
     "name": "三ノ輪橋停留場",
@@ -74,7 +74,7 @@
     "fetchedAt": "2026-11-13T07:20:04.232Z",
     "excerpt": "三ノ輪橋の名前は、かつて付近を流れていた石神井用水（音無川）と日光街道の交点に架かっていた橋に由来する。",
     "proposed": "ok",
-    "verdict": null
+    "verdict": "ok"
   },
   {
     "name": "浅草寺",
@@ -85,7 +85,7 @@
     "fetchedAt": "2026-11-13T07:20:04.615Z",
     "excerpt": "江戸時代中期になると、境内西側奥の通称「奥山」と呼ばれる区域では大道芸などが行われるようになり、境内は庶民の娯楽の場となった。",
     "proposed": "ok",
-    "verdict": null
+    "verdict": "ok"
   },
   {
     "name": "鷲神社",
@@ -96,7 +96,7 @@
     "fetchedAt": "2026-11-13T07:20:04.996Z",
     "excerpt": "江戸時代中期から酉の市で知られ、東京都足立区花畑7丁目の大鷲神社の「おおとり」に対し、鷲神社は「しんとり」と称された。",
     "proposed": "ok",
-    "verdict": null
+    "verdict": "ok"
   },
   {
     "name": "目黒不動尊（瀧泉寺）",
@@ -107,7 +107,7 @@
     "fetchedAt": "2026-11-13T07:20:05.369Z",
     "excerpt": "寺名の由来となった、境内の独鈷の滝（とっこのたき）を浴びると病気が治癒するとの信仰があった。",
     "proposed": "ok",
-    "verdict": null
+    "verdict": "ok"
   },
   {
     "name": "西新井大師",
@@ -118,7 +118,7 @@
     "fetchedAt": "2026-11-13T07:20:05.744Z",
     "excerpt": "境内には弘法大師によってもたらされたとされる加持水の井戸がある。この井戸が本堂の西側に所在することが当地の地名である西新井の名の由来とされている。",
     "proposed": "ok",
-    "verdict": null
+    "verdict": "ok"
   },
   {
     "name": "神田明神",
@@ -129,7 +129,7 @@
     "fetchedAt": "2026-11-13T07:20:06.123Z",
     "excerpt": "神田はもと伊勢神宮の御田（おみた=神田）があった土地で、神田の鎮めのために創建され、神田ノ宮と称した。",
     "proposed": "ok",
-    "verdict": null
+    "verdict": "ok"
   },
   {
     "name": "湯島天神",
@@ -140,7 +140,7 @@
     "fetchedAt": "2026-11-13T07:20:06.507Z",
     "excerpt": "江戸時代から梅の花見の名所であり、第二次世界大戦後は2～3月に「梅まつり」が開かれている。",
     "proposed": "ok",
-    "verdict": null
+    "verdict": "ok"
   },
   {
     "name": "柴又帝釈天",
@@ -151,7 +151,7 @@
     "fetchedAt": "2026-11-13T07:20:06.886Z",
     "excerpt": "天明3年（1783年）、日敬は自ら板本尊を背負って江戸の町を歩き、天明の大飢饉に苦しむ人々に拝ませたところ、不思議な効験があったため、柴又帝釈天への信仰が広まっていったという。",
     "proposed": "ok",
-    "verdict": null
+    "verdict": "ok"
   },
   {
     "name": "靖国神社",
@@ -162,7 +162,7 @@
     "fetchedAt": "2026-11-13T07:20:07.283Z",
     "excerpt": null,
     "proposed": "ng",
-    "verdict": null
+    "verdict": "ng"
   },
   {
     "name": "浅草神社",
@@ -173,7 +173,7 @@
     "fetchedAt": "2026-11-13T07:20:07.669Z",
     "excerpt": "土師真中知の没後、真中知の子の夢に観音菩薩が現れ、そのお告げに従って真中知・浜成・竹成を神として祀ったのが当社の起源であるとしている。",
     "proposed": "ok",
-    "verdict": null
+    "verdict": "ok"
   },
   {
     "name": "日本橋",
@@ -184,7 +184,7 @@
     "fetchedAt": "2026-11-13T07:20:08.064Z",
     "excerpt": "道路元標の起源は、1604年（慶長9年）に江戸幕府が日本橋を五街道の起点と定め、全国の里程（りてい）の起点としたことによる。",
     "proposed": "ok",
-    "verdict": null
+    "verdict": "ok"
   },
   {
     "name": "蔵前橋",
@@ -195,7 +195,7 @@
     "fetchedAt": "2026-11-13T07:20:08.458Z",
     "excerpt": "関東大震災の復興計画により現在の橋が架橋された。それ以前は「富士見の渡し」と呼ばれていた渡船場があった場所である。",
     "proposed": "ok",
-    "verdict": null
+    "verdict": "ok"
   },
   {
     "name": "言問橋",
@@ -206,7 +206,7 @@
     "fetchedAt": "2026-11-13T07:20:08.843Z",
     "excerpt": "「言問」という名称は在原業平の詠んだ、名にし負はばいざこと問はむ都鳥わが思ふ人はありやなしやとという歌に因むといわれている。",
     "proposed": "ok",
-    "verdict": null
+    "verdict": "ok"
   },
   {
     "name": "駒形橋",
@@ -217,7 +217,7 @@
     "fetchedAt": "2026-11-13T07:20:09.233Z",
     "excerpt": "橋名は橋の西詰にある「駒形堂」に因む。",
     "proposed": "ok",
-    "verdict": null
+    "verdict": "ok"
   },
   {
     "name": "神楽坂",
@@ -228,7 +228,7 @@
     "fetchedAt": "2026-11-13T07:20:09.629Z",
     "excerpt": "徳川家光が重臣であった酒井忠清の屋敷に頻繁に下向するため整備されたといわれる。",
     "proposed": "ok",
-    "verdict": null
+    "verdict": "ok"
   },
   {
     "name": "九段坂",
@@ -239,7 +239,7 @@
     "fetchedAt": "2026-11-13T07:20:10.008Z",
     "excerpt": "江戸時代までは九層の階段となっており、徒歩でしか通行できない道であった。",
     "proposed": "ok",
-    "verdict": null
+    "verdict": "ok"
   },
   {
     "name": "紀伊国坂",
@@ -250,7 +250,7 @@
     "fetchedAt": "2026-11-13T07:20:10.441Z",
     "excerpt": "坂の名は、江戸時代に坂の西側に紀州藩上屋敷があったことから名付けられた。",
     "proposed": "ok",
-    "verdict": null
+    "verdict": "ok"
   },
   {
     "name": "三宅坂",
@@ -261,7 +261,7 @@
     "fetchedAt": "2026-11-13T07:20:11.199Z",
     "excerpt": "坂の名前は、江戸時代、この坂の途中に三河国田原藩（現在の愛知県田原市）・三宅家の上屋敷（現在の国立劇場周辺）があったことに由来する。",
     "proposed": "ok",
-    "verdict": null
+    "verdict": "ok"
   },
   {
     "name": "神保町",
@@ -272,7 +272,7 @@
     "fetchedAt": "2026-11-13T07:20:11.614Z",
     "excerpt": "幕臣・神保長治の屋敷があったことに由来する地名。",
     "proposed": "ok",
-    "verdict": null
+    "verdict": "ok"
   },
   {
     "name": "谷中",
@@ -283,7 +283,7 @@
     "fetchedAt": "2026-11-13T07:20:12.012Z",
     "excerpt": "寺の増加に伴い参詣客も増えると徐々に町屋も形成され、江戸の庶民の行楽地として発展する。",
     "proposed": "ok",
-    "verdict": null
+    "verdict": "ok"
   },
   {
     "name": "向島",
@@ -294,7 +294,7 @@
     "fetchedAt": "2026-11-13T07:20:12.417Z",
     "excerpt": "一説には、隅田川御殿から見える中洲（東白鬚公園の一部）を指して向島と呼んだのが起源で、やがて対象範囲が拡大し、隅田川の向う側という意味に転じたという。",
     "proposed": "ok",
-    "verdict": null
+    "verdict": "ok"
   },
   {
     "name": "千束",
@@ -305,6 +305,6 @@
     "fetchedAt": "2026-11-13T07:20:12.792Z",
     "excerpt": "千束の名は、千僧供料あるいは千束分の稲田を寺領にしたことに由来するという。",
     "proposed": "ok",
-    "verdict": null
+    "verdict": "ok"
   }
 ]
