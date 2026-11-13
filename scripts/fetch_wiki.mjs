@@ -1,6 +1,6 @@
 // 使い方: node scripts/fetch_wiki.mjs [--mock]
 // 必要: Node 18以上。ネットワークから ja.wikipedia.org に接続できる環境で実行する。
-// 出力: data/wiki_check.json（機械可読）と data/review.html（目視確認用）
+// 出力: data/wiki_check.json（機械可読）、data/wiki_full.json（本文）、data/review.html と data/review.md（目視確認用）
 import { readFileSync, writeFileSync } from 'node:fs';
 
 const MOCK = process.argv.includes('--mock');
@@ -19,6 +19,23 @@ async function getSummary(title) {
   return { status: res.status, body: res.ok ? await res.json() : null };
 }
 
+// 本文（プレーンテキスト）。導入文に面白い一文がない場所のため、抜粋の候補を本文から選べるようにする
+async function getFullText(title) {
+  if (MOCK) return title + 'の本文。';
+  const url = 'https://ja.wikipedia.org/w/api.php?action=query&prop=extracts&explaintext=1&redirects=1&format=json&formatversion=2&titles=' + encodeURIComponent(title);
+  const res = await fetch(url, { headers: { 'User-Agent': UA } });
+  if (!res.ok) return null;
+  return (await res.json()).query?.pages?.[0]?.extract ?? null;
+}
+
+// 見つからない・曖昧さ回避のとき、正しいタイトルの候補を出す
+async function searchTitles(q) {
+  if (MOCK) return [q + ' (候補)'];
+  const url = 'https://ja.wikipedia.org/w/api.php?action=opensearch&limit=5&namespace=0&format=json&search=' + encodeURIComponent(q);
+  const res = await fetch(url, { headers: { 'User-Agent': UA } });
+  return res.ok ? (await res.json())[1] : [];
+}
+
 function flags(b) {
   const f = [];
   if (!b) return ['記事が見つからない（タイトル違いの可能性）'];
@@ -32,10 +49,17 @@ function flags(b) {
 }
 
 const out = [];
+const full = {};
 for (const p of places) {
   let r;
   try { r = await getSummary(p.title); } catch (e) { r = { status: 0, body: null, err: String(e) }; }
   const b = r.body;
+  const miss = !b || b.type === 'disambiguation';
+  const candidates = miss ? await searchTitles(p.name.replace(/（.*?）/g, '')) : [];
+  if (!miss) {
+    const text = await getFullText(b.title);
+    if (text) full[p.name] = { title: b.title, text };
+  }
   out.push({
     name: p.name, cat: p.cat, title: p.title, status: r.status,
     pageTitle: b?.title ?? null,
@@ -45,11 +69,13 @@ for (const p of places) {
     timestamp: b?.timestamp ?? null,
     fetchedAt: new Date().toISOString(),
     flags: flags(b),
+    candidates,
     verdict: null // 目視確認後に ok / ng / 要修正 を入れる
   });
   if (!MOCK) await new Promise(r => setTimeout(r, 300));
 }
 writeFileSync(new URL('../data/wiki_check.json', import.meta.url), JSON.stringify(out, null, 2));
+writeFileSync(new URL('../data/wiki_full.json', import.meta.url), JSON.stringify(full, null, 2));
 
 const esc = s => String(s ?? '').replace(/[&<>]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]));
 const rows = out.map(o => `<tr>
@@ -66,7 +92,8 @@ const md = [`# Wikipedia 導入文の確認（${out.length}件）`, '',
   ...out.map(o => [`## ${cell(o.name)}（${cell(o.cat)}）`, '',
     `- 記事: ${o.url ? `[${cell(o.pageTitle)}](${o.url})` : `なし（${cell(o.title)} / HTTP ${o.status}）`}`,
     `- 更新: ${cell(o.timestamp)}`,
-    ...o.flags.map(f => `- 注意: ${f}`), '',
+    ...o.flags.map(f => `- 注意: ${f}`),
+    ...(o.candidates.length ? [`- 候補: ${o.candidates.map(cell).join(' / ')}`] : []), '',
     o.extract ? '> ' + cell(o.extract) : '_取得なし_', ''].join('\n'))].join('\n');
 writeFileSync(new URL('../data/review.md', import.meta.url), md);
 console.log(`done: ${out.length} places, ok=${out.filter(o => o.extract).length}, flagged=${out.filter(o => o.flags.length).length}`);
